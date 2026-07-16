@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .find-branch {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 12px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* ---- Empty / search state ---- */
+main .find-branch .fb-search-card {
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+main .find-branch .fb-pin-lg {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  opacity: 0.7;
+}
+
+main .find-branch .fb-pin-lg svg {
+  width: 32px;
+  height: 32px;
+}
+
+main .find-branch .fb-heading {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+main .find-branch .fb-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main .find-branch .fb-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  font-size: 13px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+main .find-branch .fb-input:focus {
+  outline: 2px solid #004c8f;
+  outline-offset: 1px;
+}
+
+main .find-branch .fb-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #004c8f;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+main .find-branch .fb-btn:hover {
+  opacity: 0.88;
+}
+
+/* ---- Results state ---- */
+main .find-branch .fb-row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main .find-branch .fb-store-card {
+  flex: 0 0 260px;
+  max-width: 260px;
+  border-radius: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+main .find-branch .fb-pin-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+main .find-branch .fb-name {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+main .find-branch .fb-address {
+  margin: 0 0 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.78;
+}
+
+main .find-branch .fb-phone {
+  margin: 0 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+main .find-branch .fb-hours {
+  margin: 0;
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+/* ---- Dark mode: dim outer background only, keep palette card bg ---- */
+@media (prefers-color-scheme: dark) {
+  main .find-branch { background: transparent; }
+}
+body.dark main .find-branch { background: transparent; }
